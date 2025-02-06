@@ -31,7 +31,6 @@ fn gravitational_force(
 
     let force_magnitude = GRAVITATIONAL_CONSTANT * mass1 * mass2 / distance_squared;
     let force_direction = distance_vector / distance;
-
     force_magnitude * force_direction
 }
 
