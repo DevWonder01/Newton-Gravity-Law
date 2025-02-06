@@ -14,7 +14,7 @@ const GRAVITATIONAL_CONSTANT: f64 = 6.67430e-11; // m^3 kg^-1 s^-2
 /// # Returns
 ///
 /// A `Vector3` representing the gravitational force exerted on the first object by the second object.
-fn gravitational_force(
+fn main(
     mass1: f64,
     mass2: f64,
     position1: &Point3<f64>,
@@ -49,7 +49,7 @@ mod tests {
         let expected_force_magnitude = GRAVITATIONAL_CONSTANT * mass1 * mass2;
         let expected_force_direction = Vector3::new(1.0, 0.0, 0.0);
 
-        let calculated_force = gravitational_force(mass1, mass2, &position1, &position2);
+        let calculated_force = main(mass1, mass2, &position1, &position2);
 
         assert_eq!(calculated_force.magnitude(), expected_force_magnitude);
         assert_eq!(calculated_force.normalize(), expected_force_direction);
